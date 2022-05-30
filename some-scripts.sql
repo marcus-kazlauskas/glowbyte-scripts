@@ -183,3 +183,6 @@ where table_schema = 'grnplm_source_stg' and table_type = 'BASE_TABLE'
     and (table_name like 'td\_%' or table_name like 'ti\_%')
     and not (table_name like '%p\_1' or table_name like '%p\_2')
     and not (table_name like 'td\_%_copy_' or table_name like 'ti\_%_copy_'); --4
+
+
+--
