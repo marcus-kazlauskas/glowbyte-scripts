@@ -158,7 +158,7 @@ partition p_2 values (2)
 from information_schema.tables 
 where table_schema = 'grnplm_source_stg' and table_type = 'BASE_TABLE'
     and (table_name like 'td\_%' or table_name like 'ti\_%')
-    and not (table_name like '%p\_1' or table_name like '%p\_2'); --1 создание копий таблиц, но уже с пратицированием
+    and not (table_name like '%p\_1' or table_name like '%p\_2'); --1 создание копий таблиц, но уже с партицированием
     
 select string_agg(
 'insert into ' || table_schema || '.' || table_name || '_copy_ select * from ' || table_schema || '.' || table_name || ';', e'\n')
